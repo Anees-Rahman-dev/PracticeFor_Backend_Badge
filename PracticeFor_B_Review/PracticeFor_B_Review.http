@@ -1,0 +1,6 @@
+@PracticeFor_B_Review_HostAddress = http://localhost:5031
+
+GET {{PracticeFor_B_Review_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
