@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="B_Review_Application/B_Review_Application.csproj" />
+  <Project Path="B_Review_Domain/B_Review_Domain.csproj" />
+  <Project Path="B_Review_Infrastructure/B_Review_Infrastructure.csproj" />
   <Project Path="PracticeFor_B_Review/PracticeFor_B_Review.csproj" />
 </Solution>
