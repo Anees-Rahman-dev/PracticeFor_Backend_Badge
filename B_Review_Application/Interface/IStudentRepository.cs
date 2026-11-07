@@ -7,7 +7,7 @@ namespace B_Review_Application.Interface
 {
     public interface IStudentRepository
     {
-        List<Student> GetAllStudents();
+        List<Student> GetAll();
 
         Student? GetStudentById(int id);
 

@@ -16,9 +16,9 @@ namespace B_Review_Application.StudentService
             studentRepository = _studentRepository;
         }
 
-        public List<Student> GetAllStudents()
+        public List<Student> GetAllS()
         {
-            return _studentRepository.GetAllStudents();
+            return _studentRepository.GetAll();
         }
 
         public Student? GetStudent(int id)

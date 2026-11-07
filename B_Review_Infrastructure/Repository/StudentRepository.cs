@@ -10,7 +10,7 @@ namespace B_Review_Infrastructure.Repository
     {
         private static List<Student> students = new List<Student>();
 
-        public List<Student> GetAllStudents()
+        public List<Student> GetAll ()
         {
             return students;
         }

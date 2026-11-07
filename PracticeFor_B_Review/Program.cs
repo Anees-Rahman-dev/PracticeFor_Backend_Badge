@@ -1,4 +1,6 @@
 using B_Review_Application.Interface;
+using B_Review_Application.Service;
+using B_Review_Application.StudentService;
 using B_Review_Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +12,13 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddScoped<IStudentRepository,StudentRepository>();
+// Student CRUD
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<StudentService>();
+
+// User CRUD - ADO.NET
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 

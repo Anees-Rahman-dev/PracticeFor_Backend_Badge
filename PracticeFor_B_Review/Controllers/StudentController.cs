@@ -20,7 +20,7 @@ namespace PracticeFor_B_Review.Controllers
         [HttpGet]
         public IActionResult GetAllStudents()
         {
-            var students = _studentRepository.GetAllStudents();
+            var students = _studentRepository.GetAll();
             return Ok(students);
         }
 
