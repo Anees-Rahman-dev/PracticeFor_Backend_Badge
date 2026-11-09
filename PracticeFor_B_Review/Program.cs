@@ -1,9 +1,14 @@
 using B_Review_Application.Interface;
 using B_Review_Application.Service;
 using B_Review_Application.StudentService;
+using B_Review_Infrastructure.Data;
 using B_Review_Infrastructure.Repository;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 
@@ -19,6 +24,15 @@ builder.Services.AddScoped<StudentService>();
 // User CRUD - ADO.NET
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+//Employee
+builder.Services.AddScoped<IEmployeesRepository, EmployeesRepository>();
+builder.Services.AddScoped<IEmployeesService,EmployeesService>();
+
+
+builder.Services.AddDbContext<ApplicationDBContext>(options =>
+  options.UseSqlServer(
+      builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
