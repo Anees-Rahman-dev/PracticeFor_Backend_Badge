@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PracticeFor_B_Review.Models
+namespace B_Review.Application.DTOs.Auth
 {
     public class LoginDto
     {

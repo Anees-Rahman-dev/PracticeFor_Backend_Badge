@@ -17,6 +17,7 @@ namespace B_Review_Infrastructure.Data
         }
 
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<UserForAuth> UserForAuth { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

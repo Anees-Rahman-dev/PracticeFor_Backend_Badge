@@ -1,6 +1,10 @@
-﻿namespace PracticeFor_B_Review.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace B_Review_Domain.Entities
 {
-    public class User
+    public class UserForAuth
     {
         public int Id { get; set; }
 

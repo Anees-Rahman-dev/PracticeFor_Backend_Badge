@@ -8,6 +8,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using PracticeFor_B_Review.JwtServices;
 using PracticeFor_B_Review.Setting;
 using System.Text;
 
@@ -68,6 +69,10 @@ builder.Services.
                     ))
         };
     });
+
+builder.Services.AddScoped<TokenService>();
+
+
 
 
 var app = builder.Build();

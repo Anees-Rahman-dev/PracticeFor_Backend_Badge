@@ -1,9 +1,10 @@
-﻿using PracticeFor_B_Review.Models;
+﻿using B_Review_Application.DTO.Auth;
+using B_Review_Domain.Entities;
 
 namespace PracticeFor_B_Review.Data
 {
     public class UserStore
     {
-        public List<User> Users { get; set; } = new List<User>();
+        public List<UserForAuth> Users { get; set; } = new List<UserForAuth>();
     }
 }
